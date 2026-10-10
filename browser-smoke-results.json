@@ -1,0 +1,200 @@
+[
+  {
+    "route": "ag-ui",
+    "width": 390,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": true,
+    "unhandled_errors": []
+  },
+  {
+    "route": "ag-ui",
+    "width": 390,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 390,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": true,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 390,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 390,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": true,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 390,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "ag-ui",
+    "width": 768,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "ag-ui",
+    "width": 768,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 768,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 768,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 768,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 768,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "ag-ui",
+    "width": 1280,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "ag-ui",
+    "width": 1280,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 1280,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "a2ui",
+    "width": 1280,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": null,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 1280,
+    "decision": "confirm",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  },
+  {
+    "route": "mcp-apps",
+    "width": 1280,
+    "decision": "cancel",
+    "order_image_loaded": true,
+    "keyboard_and_busy_state": true,
+    "no_overflow": true,
+    "mcp_isolated": true,
+    "failed_request_recoverable": false,
+    "unhandled_errors": []
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://refund-demo.local/catalog/workbench-v1",
+  "catalogId": "https://refund-demo.local/catalog/workbench-v1",
+  "title": "Controlled after-sales demo catalog; MCPApp is a local extension, not a standard A2UI component",
+  "components": {
+    "Column": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "component": { "const": "Column" },
+        "appearance": { "enum": ["refund-card", "card-heading", "product-row", "product-info", "order-details", "detail-item", "refund-amount", "card-actions", "result-panel", "pickup-section", "summary", "workbench"] },
+        "children": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/id" } }
+      },
+      "required": ["id", "component", "appearance", "children"],
+      "additionalProperties": false
+    },
+    "Text": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "component": { "const": "Text" },
+        "appearance": { "enum": ["eyebrow", "card-title", "subtitle", "status-badge", "product-title", "product-spec", "product-quantity", "detail-label", "detail-value", "amount-label", "amount-value", "caption", "result-title", "result-message", "pickup-summary", "section-title"] },
+        "text": { "oneOf": [
+          { "type": "string", "maxLength": 2000 },
+          { "type": "object", "properties": { "path": { "enum": ["/pickupSummary", "/receiptLabel", "/statusLabel", "/message"] } }, "required": ["path"], "additionalProperties": false }
+        ] }
+      },
+      "required": ["id", "component", "appearance", "text"],
+      "additionalProperties": false
+    },
+    "Image": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "component": { "const": "Image" },
+        "url": { "const": "/assets/mac-mini.png" },
+        "alt": { "type": "string", "minLength": 1, "maxLength": 120 }
+      },
+      "required": ["id", "component", "url", "alt"],
+      "additionalProperties": false
+    },
+    "Button": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "component": { "const": "Button" },
+        "variant": { "enum": ["primary", "secondary"] },
+        "child": { "$ref": "#/$defs/id" },
+        "disabled": { "type": "boolean" },
+        "action": {
+          "type": "object",
+          "properties": { "event": {
+            "type": "object",
+            "properties": {
+              "name": { "enum": ["confirm_refund", "cancel_refund"] },
+              "context": {
+                "type": "object",
+                "properties": { "taskId": { "type": "string", "format": "uuid" }, "version": { "type": "integer", "minimum": 1 } },
+                "required": ["taskId", "version"], "additionalProperties": false
+              }
+            },
+            "required": ["name", "context"], "additionalProperties": false
+          } },
+          "required": ["event"], "additionalProperties": false
+        }
+      },
+      "required": ["id", "component", "variant", "child", "action"],
+      "additionalProperties": false
+    },
+    "MCPApp": {
+      "type": "object",
+      "description": "Trusted host wrapper for one allowlisted MCP App. Never arbitrary HTML or iframe URLs.",
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "component": { "const": "MCPApp" },
+        "taskId": { "type": "string", "format": "uuid" },
+        "resourceUri": { "const": "ui://after-sales/pickup.html" }
+      },
+      "required": ["id", "component", "taskId", "resourceUri"],
+      "additionalProperties": false
+    }
+  },
+  "functions": {},
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$", "maxLength": 80 },
+    "anyFunction": false,
+    "theme": { "type": "object", "additionalProperties": false },
+    "anyComponent": { "oneOf": [
+      { "$ref": "#/components/Column" }, { "$ref": "#/components/Text" },
+      { "$ref": "#/components/Image" }, { "$ref": "#/components/Button" }, { "$ref": "#/components/MCPApp" }
+    ] }
+  }
+}

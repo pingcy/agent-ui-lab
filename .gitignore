@@ -1,0 +1,12 @@
+/node_modules
+/dist/
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+/browser-artifacts/diagnostics/
+/workbench-browser-first-pass.json
+/workbench-browser-mobile-pointer.json
